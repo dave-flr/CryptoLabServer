@@ -18,7 +18,9 @@ class Encode(Resource):
 class Decode(Resource):
     @staticmethod
     def get():
-        return {'Bien'}, 200
+        method = request.args.get('method')
+        text = request.args.get('text')
+        return {'method': method, 'text': text}, 200
 
 
 api.add_resource(Encode, '/encode')
