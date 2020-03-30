@@ -16,11 +16,4 @@ Herramienta de encriptado online.
 
 Algoritmo simple de sustitución polialfabética.
 
-```mermaid  
-stateDiagram  
-A --> E  
-I --> O  
-B --> T  
-F --> G    
-P --> M 
-```
+[![](https://mermaid.ink/img/eyJjb2RlIjoiXG5zdGF0ZURpYWdyYW1cbkEgLS0-IEUgXG5JIC0tPiBPIFxuQiAtLT4gVCBcbkYgLS0-IEcgXG5QIC0tPiBNIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiXG5zdGF0ZURpYWdyYW1cbkEgLS0-IEUgXG5JIC0tPiBPIFxuQiAtLT4gVCBcbkYgLS0-IEcgXG5QIC0tPiBNIiwibWVybWFpZCI6eyJ0aGVtZSI6ImRlZmF1bHQifSwidXBkYXRlRWRpdG9yIjpmYWxzZX0)
