@@ -41,6 +41,40 @@ def encode(text):
     return ''.join(list_str)
 
 
+xcrypt_code = {
+    'e': 'w',
+    'a': 'k',
+    'o': 'x',
+    's': 'ñ',
+    'r': 'j',
+    'n': 'z',
+    'i': 'f',
+    'd': 'h',
+    'l': 'q',
+    'c': 'y',
+    't': 'v',
+    'u': 'g',
+    'm': 'b'
+}
+
+
+def xcrypt(text):
+    counter = 0
+    list_str = list(text)
+    for letter in text:
+        space = 0
+        for key, value in xcrypt_code.items():
+            if letter == key or letter.upper() == key.upper():
+                list_str[counter] = value
+                break
+            elif letter == value or letter.upper() == value.upper():
+                list_str[counter] = key
+                break
+            space += 1
+        counter += 1
+    return ''.join(list_str)
+
+
 class Encode(Resource):
     @staticmethod
     def get():
@@ -57,6 +91,8 @@ class Encode(Resource):
             text = hashlib.sha512(text.encode()).hexdigest()
         elif method == 'Malespin':
             text = encode(text)
+        elif method == 'XCrypt':
+            text = xcrypt(text)
 
         return {'method': method, 'text': text}, 200
 
